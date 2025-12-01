@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <ModMetadata xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Name>Sealedsustenance</Name>
-  <Author>Defaultcompany</Author>
+  <Name>Sealed Sustenance</Name>
+  <Author>Chris L</Author>
   <Version>1.0</Version>
-  <Description></Description>
+  <Description>This mods add new items and structures to create food and water that can be used with the space suit helmet closed.</Description>
   <WorkshopHandle>0</WorkshopHandle>
   <Tags>
     <Tag>LaunchPad</Tag>
