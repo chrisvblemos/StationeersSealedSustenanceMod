@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>English</Name>
+  <Code>EN</Code>
+  <Font>font_english</Font>
+  <Things>
+    <RecordThing>
+      <Key>ItemKitNutrientGelDispenser</Key>
+      <Value>Kit (Nutrient Gel Dispenser)</Value>
+      <Description />
+    </RecordThing>
+
+    <RecordThing>
+      <Key>ItemKitSealedWaterDispenser</Key>
+      <Value>Kit (Sealed Water Dispenser)</Value>
+      <Description />
+    </RecordThing>
+
+    <RecordThing>
+      <Key>ItemNutrientGel</Key>
+      <Value>Nutrient Gel</Value>
+      <Description>
+        6 out of 10 astronauts say they prefer using our Nutrient Gel rather than being exposed to toxic environments!
+        Stores 100 Nutrients.
+        Can be consumed with a closed space suit helmet. 
+        To fabricate it, use the {THING:StructureToolManufactory}. 
+        Can be refilled with a {THING:StructureNutrientGelDispenser}.
+      </Description>
+    </RecordThing>
+
+    <RecordThing>
+      <Key>ItemSealedWater</Key>
+      <Value>Sealed Water</Value>
+      <Description>
+        Made for astronauts.
+        Stores 1500mL of Water.
+        Can be consumed with a closed space suit helmet. 
+        To fabricate it, use the {THING:StructureToolManufactory}. 
+        Can be refilled with a {THING:StructureSealedWaterDispenser}.
+      </Description>
+    </RecordThing>
+
+    <RecordThing>
+      <Key>StructureSealedWaterDispenser</Key>
+      <Value>Sealed Water Dispenser</Value>
+      <Description>
+        Can refil {THING:ItemSealedWater} by adding it to any of the two slots at the front.
+        Requires Water to work similar to {THING:ItemWaterBottleFiller}.
+        To fabricate it, use the {THING:StructureHydraulicPipeBender}. 
+      </Description>
+    </RecordThing>
+
+    <RecordThing>
+      <Key>StructureNutrientGelDispenser</Key>
+      <Value>Nutrient Gel Dispenser</Value>
+      <Description>
+        Can refil {THING:ItemNutrientGel} by adding it to any of the two slots at the front.
+        Requires Nutrients to work. To fill it with Nutrients add any Food to it through the Input Slot at the front and wait for it to be processed.
+        Can store a maximum of 1000 Nutrients.
+        The machine will generate half of Nutrients of the inserted food.
+        To fabricate it, use the {THING:StructureHydraulicPipeBender}. 
+      </Description>
+    </RecordThing>
+  </Things>
+
+  <Slots>
+    <Record>
+      <Key>SealedWaterBagSlot</Key>
+      <Value>Sealed Water Bag Slot</Value>
+    </Record>
+
+    <Record>
+      <Key>NutrientGelSlot</Key>
+      <Value>Nutrient Gel Slot</Value>
+    </Record>
+
+    <Record>
+      <Key>NutrientGelDispenserInputSlot</Key>
+      <Value>Food Slot</Value>
+    </Record>
+  </Slots>
+</Language>

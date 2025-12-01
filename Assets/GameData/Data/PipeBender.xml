@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <HydraulicPipeBenderRecipes>
+    <RecipeData>
+      <PrefabName>ItemKitNutrientGelDispenser</PrefabName>
+      <Recipe>
+            <Time>45</Time>
+            <Energy>1500</Energy>
+            <Iron>5</Iron>
+            <Carbon>0</Carbon>
+            <Copper>5</Copper>
+            <Silicon>2</Silicon>
+            <Steel>0</Steel>
+            <Uranium>0</Uranium>
+            <Hydrocarbon>0</Hydrocarbon>
+        </Recipe>
+        <RecipeTier>TierTwo</RecipeTier>
+    </RecipeData>
+
+    <RecipeData>
+      <PrefabName>ItemKitSealedWaterDispenser</PrefabName>
+      <Recipe>
+            <Time>45</Time>
+            <Energy>1500</Energy>
+            <Iron>5</Iron>
+            <Carbon>0</Carbon>
+            <Copper>5</Copper>
+            <Silicon>2</Silicon>
+            <Steel>0</Steel>
+            <Uranium>0</Uranium>
+            <Hydrocarbon>0</Hydrocarbon>
+        </Recipe>
+        <RecipeTier>TierTwo</RecipeTier>
+    </RecipeData>
+  </HydraulicPipeBenderRecipes>
+</GameData>

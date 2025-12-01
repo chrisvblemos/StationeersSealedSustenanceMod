@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<ToolManufactoryRecipes>
+        <RecipeData>
+			<PrefabName>ItemNutrientGel</PrefabName>
+			<Recipe>
+				<Time>10</Time>
+				<Energy>500</Energy>
+				<Iron>1</Iron>
+				<Silicon>1</Silicon>
+			</Recipe>
+			<RecipeTier>TierTwo</RecipeTier>
+		</RecipeData>
+        <RecipeData>
+			<PrefabName>ItemSealedWater</PrefabName>
+			<Recipe>
+				<Time>10</Time>
+				<Energy>500</Energy>
+				<Iron>1</Iron>
+				<Silicon>1</Silicon>
+			</Recipe>
+			<RecipeTier>TierTwo</RecipeTier>
+		</RecipeData>
+	</ToolManufactoryRecipes>
+</GameData>
