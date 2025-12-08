@@ -120,7 +120,7 @@ MonoBehaviour:
   - StringKey: SealedWaterBagSlot
     StringHash: 14871136
     Type: 25
-    SpecificTypePrefabHash: 14871136
+    SpecificTypePrefabHash: -1
     NewType1: 0
     NewType2: 0
     Location: {fileID: 3096799999727581468}
@@ -372,7 +372,7 @@ MonoBehaviour:
     Tool:
       ToolEntry: {fileID: 21336901022532904, guid: b037abfbfed6bc54bba8ed27d879b021, type: 3}
       ToolEntry2: {fileID: 0}
-      EntryTime: 0
+      EntryTime: 2
       EntryQuantity: 1
       EntryQuantity2: 0
       ToolUseType: 0

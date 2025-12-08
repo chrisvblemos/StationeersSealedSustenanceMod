@@ -273,16 +273,22 @@ namespace SealedSustenance.Structures
             return extendedText;
         }
 
-        private void EnableInputSlot()
+        private void EnableSlots()
         {
-            this.InputSlot.Interactable.Collider.enabled = true;
-            this.InputSlot.IsInteractable = true;
+            for (int i = 0; i < Slots.Count; i++)
+            {
+                Slots[i].IsInteractable = true;
+                Slots[i].Interactable.Collider.enabled = true;
+            }
         }
 
-        private void DisableInputSlot()
+        private void DisableSlots()
         {
-            this.InputSlot.Interactable.Collider.enabled = false;
-            this.InputSlot.IsInteractable = false;
+            for (int i = 0; i < Slots.Count; i++)
+            {
+                Slots[i].IsInteractable = false;
+                Slots[i].Interactable.Collider.enabled = false;
+            }
         }
 
         public override void BuildUpdate(RocketBinaryWriter writer, ushort networkUpdateType)
@@ -399,13 +405,13 @@ namespace SealedSustenance.Structures
 
             Debug.Log("[NutrientGelDispenser] Starting to process...");
 
-            var _nutrientsToConsume = Mathf.Min(_capacity - _stored, _toProcess.Quantity * _toProcess.NutritionValue);
+            var _nutrientsToConsume = Mathf.Min(2 * (_capacity - _stored), _toProcess.Quantity * _toProcess.NutritionValue);
             var _quantityToConsume = _nutrientsToConsume / _toProcess.NutritionValue;
             var _nutrientsToAdd =  _nutrientsToConsume * 0.5f;
 
             Debug.Log($"[NutrientGelDispenser] Will consume {_nutrientsToConsume} from {_toProcess.PrefabName}");
 
-            DisableInputSlot();
+            DisableSlots();
 
             float complete = 0f;
             float length = _nutrientsToConsume / _processingRate;
@@ -434,12 +440,12 @@ namespace SealedSustenance.Structures
             }
 
             RefreshAnimState();
-            EnableInputSlot();
+            EnableSlots();
         }
 
         public void AddNutrientsToStorage(float num)
         {
-            Stored = Mathf.Min(_capacity, _stored + num);
+            Stored = Mathf.Clamp(_stored + num, 0, _capacity);
 
             RefreshAnimState();
         }
@@ -512,7 +518,7 @@ namespace SealedSustenance.Structures
 
         private void RefillTick()
         {
-            if (_stored  == 0)
+            if (_stored  <= 0 || _processing > 0)
             {
                 return;
             }
@@ -527,9 +533,18 @@ namespace SealedSustenance.Structures
                         continue;
                     }
 
-                    float fill = Mathf.Clamp(Time.deltaTime / _timeToRefill, 0, Mathf.Min(_stored, occupant.MaxQuantity - occupant.Quantity));
-                    Stored -= fill * occupant.NutritionValue;
-                    occupant.Quantity += fill;
+                    float maxQty = Mathf.Min(Stored / occupant.NutritionValue, occupant.MaxQuantity - occupant.Quantity);
+                    float fillQty = Mathf.Clamp(Time.deltaTime / _timeToRefill, 0, maxQty);
+
+                    float nutrientsToRemove = fillQty * occupant.NutritionValue;
+
+                    Stored -= fillQty * occupant.NutritionValue;
+                    if (Stored < 1)
+                    {
+                        Stored = 0;
+                    }
+
+                    occupant.Quantity += fillQty;
                 }
             }
         }
