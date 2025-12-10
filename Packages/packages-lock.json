@@ -181,7 +181,7 @@
       "hash": "497b7f6a5458a383aa7e41759b7c9e5af4291f2a"
     },
     "stationeers.modding.assemblies": {
-      "version": "https://github.com/ilodev/stationeers.modding.assemblies.git",
+      "version": "https://github.com/chrisvblemos/stationeers.modding.assemblies.git",
       "depth": 0,
       "source": "git",
       "dependencies": {
@@ -190,7 +190,7 @@
         "com.unity.textmeshpro": "3.0.6",
         "com.unity.ugui": "1.0.0"
       },
-      "hash": "c16976b1476d4b07e8518875d402f512656003f8"
+      "hash": "1f0273f98b1cdc4ebf4e945c2876f95cf0abc30b"
     },
     "stationeers.modding.exporter": {
       "version": "https://github.com/ilodev/stationeers.modding.exporter.git",
